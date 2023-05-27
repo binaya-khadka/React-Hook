@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Products } from './products'
+import { Button } from 'react-bootstrap'
+import {
+  Rating
+} from './component';
+import * as styles from './styles/present'
 
-function App() {
+export default function App() {
+
+  const isValid: boolean = true;
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div style={{ ...styles.centerText, ...styles.wrapper }}>
+      {/* <h1>Hello {formatName(user)}</h1> */}
+      {/* < Products />
+      <Button variant="danger" disabled={!isValid}>Default</Button> */}
+      <Rating rating='1' />
+      <Rating rating='2' />
+      <Rating rating='3' />
+      <Rating rating='4' />
+      <Rating rating='5' />
+    </div >
+  )
 }
-
-export default App;
